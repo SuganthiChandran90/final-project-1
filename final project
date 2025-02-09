@@ -1,0 +1,85 @@
+@@ -0,0 +1,101 @@
+/* Base styles */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #dedede;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 1.95em;
+}
+h2 {
+    text-align: center;
+}
+li {
+    margin-top: 20px;
+}
+img {
+    border: 5px solid blue;
+    border-radius: 35px;
+    width: 100%;
+}
+.label {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+/* First Media Query - For screens 600px and up */
+@media screen and (min-width: 600px) {
+    body {
+        font-size: 20px;
+    }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+/* Second Media Query - For screens 768px and up */
+@media screen and (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 10px;
+    }
+    figure {
+        transition: transform 0.3s ease;
+    }
+    figure:hover {
+        transform: scale(1.05);
+    }
+}
+/* Third Media Query - For screens 992px and up */
+@media screen and (min-width: 992px) {
+    body {
+        max-width: 1200px;
+        margin: 15px auto;
+    }
+    .grid {
+        padding: 20px;
+    }
+    img {
+        border-width: 6px;
+    }
+}
+/* Fourth Media Query - For screens 1200px and up */
+@media screen and (min-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+    figure figcaption {
+        font-size: 0.9em;
+        margin-top: 10px;
+    }
+}
